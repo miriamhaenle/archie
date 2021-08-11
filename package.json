@@ -1,0 +1,22 @@
+{
+  "name": "archie",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": "true",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "start": "npm-run-all -p -l start:*",
+    "start:ui": "yarn workspaces @archie/ui start",
+    "start:bff": "yarn workspaces @archie/bff start",
+    "build:ui": "yarn workspaces @archie/ui build",
+    "build:bff": "yarn workspaces @archie/bff build"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}

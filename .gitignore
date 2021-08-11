@@ -1,0 +1,7 @@
+node_modules
+.env
+packages/ui/build
+packages/bff/dist
+packages/bff/src/**/*.d.ts
+packages/bff/src/**/*.js
+.vscode/settings.json
