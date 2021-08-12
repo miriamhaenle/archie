@@ -1,9 +1,10 @@
-import express from "express";
+import express from 'express';
 
 const app = express();
 
-app.get("/", (req, res) => {
-  res.status(200).json({ message: "Server is up and running." });
+app.get('/', (req, res) => {
+  res.status(200).json({ message: 'Server is up and running.' });
 });
 
-app.listen(3000, () => console.log("Sever listens on port 3000."));
+const PORT = 4000;
+app.listen(PORT, () => console.log(`Sever listens on port ${PORT}`));
