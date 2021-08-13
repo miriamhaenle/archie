@@ -1,0 +1,14 @@
+[
+        {
+        "id": "dog1",
+        "name": "Archie",
+        "age": 3,
+        "dailyCaloryIntake": []
+        },
+    {
+        "id": "dog2",
+        "name": "Henry",
+        "age": 10,
+        "dailyCaloryIntake": []
+    }
+]    
