@@ -35,6 +35,10 @@ export const food: FoodCategory = {
 };
 
 export const caloryNeedPerAge: Record<number, { min: number; max: number }> = {
+  1.5: {
+    min: 260.75,
+    max: 670.5,
+  },
   2: {
     min: 689,
     max: 838,
@@ -46,6 +50,10 @@ export const caloryNeedPerAge: Record<number, { min: number; max: number }> = {
   4: {
     min: 1360,
     max: 1750,
+  },
+  5: {
+    min: 1310,
+    max: 1750.75,
   },
   7: {
     min: 1453,
