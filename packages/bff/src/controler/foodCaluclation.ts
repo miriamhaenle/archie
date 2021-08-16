@@ -13,9 +13,7 @@ export type DogList = Dog[];
 
 export type Food = {
   id: string;
-  name: string;
   amount: number;
-  unit: string;
 };
 
 const isInAgeRange = (value: number | undefined) => {
@@ -24,25 +22,25 @@ const isInAgeRange = (value: number | undefined) => {
   }
 };
 
-const caluclateCaloryPerIntake = (foodName: string, intake: number) =>
-  food[foodName].calories * intake;
+const caluclateCaloryPerIntake = (foodId: string, intake: number) =>
+  food[foodId].calories * intake;
 
 export const postFood = (req: Request, res: Response) => {
+  const dogId = req.params.id;
   const newIntake: Food = {
     id: req.body.id,
-    name: req.body.name,
     amount: req.body.amount,
-    unit: req.body.unit,
   };
 
   dogs.map((dog: Dog) => {
-    if (dog.id === newIntake.id) {
+    if (dog.id === dogId) {
       const updatedIntake = caluclateCaloryPerIntake(
-        newIntake.name,
+        newIntake.id,
         newIntake.amount
       );
 
       dog.dailyCaloryIntake.push(updatedIntake);
+      res.json(dog);
     }
   });
 };

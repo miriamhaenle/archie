@@ -1,33 +1,39 @@
 export type FoodCategory = Record<string, FoodItem>;
 
 export type FoodItem = {
+  id: string;
   name: string;
   calories: number;
   unit: 'gram' | 'piece';
 };
 
 export const food: FoodCategory = {
-  joseraYoungStar: {
+  1: {
+    id: '1',
     name: 'Josera Young Star',
     calories: 3.725,
     unit: 'gram',
   },
-  lambBelly: {
+  2: {
+    id: '2',
     name: 'Dried lamb belly',
     calories: 0.98,
     unit: 'gram',
   },
-  cheese: {
+  3: {
+    id: '3',
     name: 'Cheese',
     calories: 2.1,
     unit: 'gram',
   },
-  cottageCheese: {
+  4: {
+    id: '4',
     name: 'Cottage Cheese',
     calories: 0.98,
     unit: 'gram',
   },
-  joseraLoopies: {
+  5: {
+    id: '5',
     name: 'Josera Loopies',
     calories: 8.6,
     unit: 'piece',
