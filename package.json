@@ -12,7 +12,7 @@
   "scripts": {
     "start": "npm-run-all -p -l start:*",
     "start:ui": "yarn workspace @archie/ui start",
-    "start:bff": "yarn workspace @archie/bff dev",
+    "start:bff": "yarn workspace @archie/bff start:dev",
     "build:ui": "yarn workspace @archie/ui build",
     "build:bff": "yarn workspace @archie/bff build"
   },
